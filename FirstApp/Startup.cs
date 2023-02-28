@@ -23,7 +23,9 @@ public class Startup
         services.AddScoped<AuthorQueries>();
         
         // GraphQL
-        services.AddGraphQLServer().AddQueryType<Query>();
+        services.AddGraphQLServer()
+            .AddQueryType<Query>()
+            .AddSorting();
         
         // Database
         services.AddDbContext<LibraryDbContext>(options =>
