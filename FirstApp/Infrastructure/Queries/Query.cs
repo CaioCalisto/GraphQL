@@ -17,6 +17,6 @@ public class QueryType : ObjectType<Query>
     {
         descriptor
             .Field(q => q.GetAuthors(default))
-            .UsePaging();
+            .UseOffsetPaging();
     }
 }

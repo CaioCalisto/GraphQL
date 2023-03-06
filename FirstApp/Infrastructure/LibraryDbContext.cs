@@ -21,9 +21,9 @@ public class LibraryDbContext : DbContext
         modelBuilder.Entity<Entities.Author>().HasData(new List<Author>()
         {
             new Author(){ Id = 1, Name = "Caio", BornDate = DateOnly.Parse("1988-08-20")},
-            new Author(){ Id = 2, Name = "Tiago", BornDate = DateOnly.Parse("1988-08-20")},
-            new Author(){ Id = 3, Name = "Bruno", BornDate = DateOnly.Parse("1988-08-20")},
-            new Author(){ Id = 4, Name = "Ednilson", BornDate = DateOnly.Parse("1988-08-20")},
+            new Author(){ Id = 2, Name = "Tiago", BornDate = DateOnly.Parse("1980-05-12")},
+            new Author(){ Id = 3, Name = "Bruno", BornDate = DateOnly.Parse("1989-01-06")},
+            new Author(){ Id = 4, Name = "Ednilson", BornDate = DateOnly.Parse("1984-11-02")},
         });
     }
 }
