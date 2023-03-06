@@ -24,7 +24,7 @@ public class Startup
         
         // GraphQL
         services.AddGraphQLServer()
-            .AddQueryType<Query>()
+            .AddQueryType<QueryType>()
             .AddProjections()
             .AddFiltering()
             .AddSorting();

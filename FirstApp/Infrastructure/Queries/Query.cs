@@ -10,3 +10,13 @@ public class Query
     public IQueryable<Author> GetAuthors([Service] LibraryDbContext libraryDbContext) =>
         libraryDbContext.AuthorTable.AsQueryable();
 }
+
+public class QueryType : ObjectType<Query>
+{
+    protected override void Configure(IObjectTypeDescriptor<Query> descriptor)
+    {
+        descriptor
+            .Field(q => q.GetAuthors(default))
+            .UsePaging();
+    }
+}
